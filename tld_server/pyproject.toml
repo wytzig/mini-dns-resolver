@@ -1,0 +1,18 @@
+[project]
+name = "tld-server"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Luuk Weiss",email = "luukweiss@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask (>=3.1.1,<4.0.0)",
+    "requests (>=2.32.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

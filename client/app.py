@@ -1,4 +1,8 @@
 import requests
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # needed to import the logger from the /common/ folder
+from common.logger import setup_logger
 
 def main():
     print("Simple DNS Client started. Type a domain to resolve or 'exit' to quit.")

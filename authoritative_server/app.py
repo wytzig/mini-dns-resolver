@@ -1,4 +1,8 @@
 from flask import Flask, request, jsonify
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # needed to import the logger from the /common/ folder
+from common.logger import setup_logger
 
 app = Flask(__name__)
 

@@ -1,5 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # needed to import the logger from the /common/ folder
+from common.logger import setup_logger
 
 app = Flask(__name__)
 
@@ -8,6 +12,10 @@ TLD_MAP = {
     "com": "http://localhost:8002",
     "net": "http://localhost:8003"  # Optional for extension
 }
+
+# # you can use this setup to log something
+# logger = setup_logger()
+# logger.debug("something to debug")
 
 @app.route('/resolve')
 def resolve():
